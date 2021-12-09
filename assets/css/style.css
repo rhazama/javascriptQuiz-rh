@@ -11,14 +11,15 @@
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: 4rem;
     color: black;
     margin-bottom: 5rem;
 }
 
 h2 {
-    font-size: 4.2rem;
-    margin-bottom: 4rem;
+    font-size: 3.2rem;
+    color: black;
+    margin-bottom: 1rem;
 }
 
 .container {
