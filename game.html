@@ -8,6 +8,7 @@
     <title>Javascript Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/game.css">
+    <script defer src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -24,29 +25,21 @@
                 </div>
                 <div class="headOfDisplay-item">
                     <h2 class="headOfDisplay-prefix">
-                        Time
+                        Score
                     </h2>
-                    <h1 class="headOfDisplay-main-text" id="time">
+                    <h1 class="headOfDisplay-main-text" id="score">
                         0
                     </h1>
                 </div>
             </div>
-            <h1 id="question">This is the question I will be asking</h1>
-            <div class="choice-container">
-                <p class="choice-prefix">A. </p>
-                <p class="choice-text" data-number="1">Choice</p>
-            </div> 
-            <div class="choice-container">
-                <p class="choice-prefix">B. </p>
-                <p class="choice-text" data-number="2">Choice</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">C. </p>
-                <p class="choice-text" data-number="3">Choice</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">D. </p>
-                <p class="choice-text" data-number="4">Choice</p>
+            <div id="question-container" class="hide">
+                <h1 id="question">Question</h1>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
             </div>
         </div>
     </div>
