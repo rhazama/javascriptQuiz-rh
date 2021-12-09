@@ -66,8 +66,9 @@ h2 {
 
 .btn:hover {
     cursor: pointer;
-    transition: transform 200ms;
-    transform: scale(1.05);
+    box-shadow: 0 0.4rem 1.4rem 0 grey;
+    transition: transform 150ms;
+    transform: scale(1.03);
 }
 
 .btn[disabled]:hover {
@@ -87,5 +88,5 @@ h2 {
 }
 
 #highscore-btn:hover {
-    box-shadow: 0 0.4rem 1.4rem - rgba(255, 255, 0, 0.5)
+    box-shadow: 0 0.4rem 1.4rem - grey;
 }
