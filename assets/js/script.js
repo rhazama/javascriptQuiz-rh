@@ -51,7 +51,8 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const controlDiv = document.querySelector('.controls')
-const headOfDisplay = document.querySelector('.headOfDisplay-item')
+const headOfDisplay1 = document.querySelector('.headOfDisplay-item1')
+const headOfDisplay2 = document.querySelector('.headOfDisplay-item2')
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
@@ -63,7 +64,7 @@ function startGame() {
     console.log('started')
     controlDiv.classList.add('hide')
     startButton.classList.remove('hide')
-    headOfDisplay.classList.remove('hide')
+    headOfDisplay1.classList.remove('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     questionContainerElement.classList.remove('hide')
     timerId = setInterval(clockTick, 1000)
@@ -148,30 +149,56 @@ function quizOver() {
     console.log('quizOver')
     // Hide the questions container by adding a hide class
     questionContainerElement.classList.add('hide')
+    headOfDisplay1.classList.add('hide')
+    headOfDisplay2.classList.remove('hide')
     // Show the End Screen with the form to fill out highscore with initials
-    // Highscore can just be time left
+    //creating input
+    var inputEl = document.createElement("input");
+    inputEl.setAttribute("type", "text");
+    inputEl.setAttribute ("class", "text-xl mt-5")
+    inputEl.textContent = "";
+    quizQuestions.appendChild(inputEl);
 
+    //creating submit
+    var submitEl = document.createElement("btn");
+    submitEl.setAttribute("type", "submit");
+    submitEl.setAttribute("class", "btn");
+    submitEl.textContent = "Submit";
+    quizQuestions.appendChild(submitEl);
+    // Highscore can just be time left
+    
     // Add Save HighScore Function
     // Set a var to the value of the input field
-    var highScores = JSON.parse(window.localStorage.getItem('highscores')) || [];
-    var newScore = {
-        score: time,
-        initials: initials
-    }
-    // push new score into highscores array
-    // set localstorage with the new highscores array
-    submitEl.addEventListener("click", function () {
+    // var highScores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+    // var newScore = {
+    //    score: time,
+    //    initials: initials
+    //}
+    submitEl.addEventListener("click", function saveHighScore() {
         var initials = inputEl.value;
 
         if (initials === null) {
-            alert("Please write something here");
+            alert("Enter your initials");
         } else {
             var totalScore = {
-                initials: initials,
+                initials: inputEl.value,
                 score: time
             }
         }
+        console.log(totalScore);
+        var userScores = localStorage.getItem("userScores");
+        if (userScores === null) {
+            userScores = [];
+        } else {
+            userScores = JSON.parse(userScores);
+        }
+        // push new score into highscores array
+        userScores.push(totalScore);
+        userScores.sort((a, b) => b.score - a.score);
+        // set localstorage with the new highscores array
+        var updateScore = JSON.stringify(userScores);
+        localStorage.setItem("userScores", updateScore);
         // replace window location with highscores html
-        window.location.replace("./highscore.html")
+        window.location.replace("highscore.html")
     });
 }
