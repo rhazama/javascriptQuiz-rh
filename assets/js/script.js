@@ -77,6 +77,7 @@ function clockTick() {
     console.log(time)
     if(time <= 0) {
         console.log('quiz Over')
+        quizOver()
     }
 }
 
@@ -89,6 +90,7 @@ function showQuestion(question) {
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text
+        button.setAttribute("class", "btn");
         button.setAttribute('value', answer.correct)
         if (answer.correct) {
             button.dataset.correct = answer.correct
@@ -156,14 +158,12 @@ function quizOver() {
     inputEl.setAttribute("type", "text");
     inputEl.setAttribute ("class", "text-xl mt-5")
     inputEl.textContent = "";
-    questions.appendChild(inputEl);
 
     //creating submit
     var submitEl = document.createElement("btn");
     submitEl.setAttribute("type", "submit");
     submitEl.setAttribute("class", "btn");
     submitEl.textContent = "Submit";
-    questions.appendChild(submitEl);
     // Highscore can just be time left
     
     // Add Save HighScore Function

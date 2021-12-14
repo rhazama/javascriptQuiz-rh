@@ -97,17 +97,3 @@ h2 {
 .headOfDisplay-main-text {
     text-align: center;
 }
-
-#highscore-btn {
-    background: white;
-}
-
-#highscore-btn {
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
-
-#highscore-btn:hover {
-    box-shadow: 0 0.4rem 1.4rem - grey;
-}
