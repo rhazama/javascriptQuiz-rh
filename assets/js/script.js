@@ -46,7 +46,6 @@ const questions = [
     }
 ]
 const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -157,14 +156,14 @@ function quizOver() {
     inputEl.setAttribute("type", "text");
     inputEl.setAttribute ("class", "text-xl mt-5")
     inputEl.textContent = "";
-    quizQuestions.appendChild(inputEl);
+    questions.appendChild(inputEl);
 
     //creating submit
     var submitEl = document.createElement("btn");
     submitEl.setAttribute("type", "submit");
     submitEl.setAttribute("class", "btn");
     submitEl.textContent = "Submit";
-    quizQuestions.appendChild(submitEl);
+    questions.appendChild(submitEl);
     // Highscore can just be time left
     
     // Add Save HighScore Function
