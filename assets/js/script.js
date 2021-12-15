@@ -156,8 +156,8 @@ function quizOver() {
     //creating input
     var inputEl = document.createElement("input");
     inputEl.setAttribute("type", "text");
-    inputEl.setAttribute ("class", "text-xl mt-5")
     inputEl.textContent = "";
+    clearInterval.appendChild(inputEl)
 
     //creating submit
     var submitEl = document.createElement("btn");
