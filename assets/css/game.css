@@ -21,14 +21,6 @@ body {
     transform: transform 100ms;
 }
 
-.correct {
-    background: green;
-}
-
-.incorrect {
-    background: red;
-}
-
 #headOfDisplay {
     display: flex;
     justify-content: space-between;
@@ -41,20 +33,6 @@ body {
 
 .headOfDisplay-main-text {
     text-align: center;
-}
-
-#progressBar {
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem solid grey;
-    border-radius: 50px;
-    overflow: hidden;
-}
-
-#progressBarFull {
-    height: 100%;
-    background: green;
-    width: 0%;
 }
 
 @media screen and (max-width: 768px) {
