@@ -140,6 +140,28 @@ function selectAnswer(e) {
     }
 }
 
+var responseValidator = function(event) {
+    var buttonSelection = event.target.innertext;
+    var correctAnswer = questions[0].correctAnswer;
+
+    console.log(buttonSelection);
+    console.log(correctAnswer);
+
+    if (buttonSelection === correctAnswer && buttonSelection === document.querySelector(".btn")) {
+        console.log("CORRECT");
+        var answer = "correct!";
+    } else if (buttonSelection != correctAnswer && buttonSelection === document.quesrySelector(".btn")) {
+        console.log("FLASE");
+        var answer = "incorrect!";
+    }
+
+    feedback(answer);
+}
+
+var feedback = function(answer) {
+    answer = document.querySelector("answer-feedback")
+}
+
 function quizOver() {
     clearInterval(timerId);
     console.log('quizOver')
