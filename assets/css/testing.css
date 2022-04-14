@@ -2,7 +2,7 @@ body {
     color: white;
 }
 
-.btn {
+.choice-container {
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
@@ -10,15 +10,31 @@ body {
     background: rgb(146, 205, 223);
     font-size: 3rem;
     min-width: 80rem;
-    padding: 2rem 2.5rem;
-    color: white;
 }
 
-.btn:hover {
+.choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(146, 205, 223);
     transform: scale(1.02);
     transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
 }
 
 #headOfDisplay {
@@ -33,6 +49,20 @@ body {
 
 .headOfDisplay-main-text {
     text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid grey;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: green;
+    width: 0%;
 }
 
 @media screen and (max-width: 768px) {
