@@ -1,0 +1,42 @@
+body {
+    color: white;
+}
+
+.btn {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(146, 205, 223);
+    font-size: 3rem;
+    min-width: 80rem;
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(146, 205, 223);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+#headOfDisplay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headOfDisplay-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.headOfDisplay-main-text {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
