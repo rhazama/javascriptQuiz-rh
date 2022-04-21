@@ -12,4 +12,4 @@ The javascript quiz website is designed to help beginner web developers test the
 Run the application by clicking the following link: https://rhazama.github.io/javascriptQuiz-rh/
 
 ## Website
-<img width="1792" alt="Screen Shot 2022-04-21 at 7 25 37 AM" src="https://user-images.githubusercontent.com/88352747/164479992-5f898334-562c-42dc-83b1-269a48eb8860.png">
+<img width="1540" alt="Screen Shot 2022-04-21 at 7 27 35 AM" src="https://user-images.githubusercontent.com/88352747/164480410-46625167-b871-4a3e-8d60-8bf94db5a906.png">
